@@ -64,14 +64,13 @@ final class Day16ConundrumSolver extends AbstractConundrumSolver
 
     public function partTwo(): string|int
     {
-        // We need a way to get all paths
-        // with best score and then get
-        // every single tile from them
-        // but objects are updated and
-        // I dont know how to reset them
-        // properly
-        // If I reset them, whoops, infinite
-        // loop
+        /**
+         * I clearly have a problem because
+         * I'm dealing with objects that I
+         * update. If I want it to work, I'll
+         * have to switch to another kind of
+         * data storage
+         */
 
         return self::UNDETERMINED;
     }

@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- PHP 8.4
+- PHP 8.5
 
 ## How to install
 
@@ -37,7 +37,7 @@ set it in your `.env.local` file as the `AOC_SESSION_KEY` parameter. Beware not 
 
 - If there are different test inputs for part one and two, just create two test input files and append the filename with
   `_1` or `_2` to differentiate them
-- You must implement the solver constructor and use it to path both the year and day as strings to the parent
+- You must implement the solver constructor and use it to pass both the year and day as strings to the parent
   constructor call, or else the `SolverHandler` service will not be able to find it when attempting to use it
 - Implement your logic in both `partOne()` and `partTwo()` and have them return your result
 - You can override `warmup()` to warmup class properties, manage input for both parts...

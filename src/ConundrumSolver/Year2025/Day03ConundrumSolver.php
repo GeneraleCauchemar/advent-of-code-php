@@ -31,10 +31,11 @@ final class Day03ConundrumSolver extends AbstractConundrumSolver
          */
         foreach ($this->getInput() as $bank) {
             $bank = str_split($bank);
-            $chunk = \array_slice($bank, 0, -1);
 
-            $a = max($chunk);
-            $b = max(\array_slice($bank, array_search($a, $chunk, true) + 1));
+            $chunkA = \array_slice($bank, 0, -1);
+            $a = max($chunkA);
+            $chunkB = \array_slice($bank, array_search($a, $chunkA, true) + 1);
+            $b = max($chunkB);
 
             $totalOutputJoltage += (int) ($a . $b);
         }
@@ -53,7 +54,7 @@ final class Day03ConundrumSolver extends AbstractConundrumSolver
         /**
          * Slicing the line to always manage chunks that
          * stop x steps before the end of the bank but
-         * start right before the offset of the previous
+         * start right after the offset of the previous
          * digit in the joltage sequence, we are still
          * looking for the highest digit in the chunk and
          * updating the offset accordingly
@@ -70,7 +71,7 @@ final class Day03ConundrumSolver extends AbstractConundrumSolver
                 $offset = array_search($max, $chunk, true) + 1;
             }
 
-            $totalOutputJoltage += (int) ($joltage);
+            $totalOutputJoltage += (int) $joltage;
         }
 
         return $totalOutputJoltage;
