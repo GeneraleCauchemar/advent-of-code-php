@@ -27,7 +27,8 @@ $ (symfony) console make:solver
 $ (symfony) console app:grab-input <year> <day>
 ```
 
-The first command will ask you to specify the year and day, and then create a solver accordingly.
+The first command will ask you to specify the year and day, and then create a solver accordingly (you can also specify
+`<year> <day>` in the command call).
 The second one will automatically grab the input for the specified date and put it in the file. You will still need to
 manually get and c/c the example input(s).
 **To automatically grab your input, the app needs to know your session ID. You will need to get it from your browser and
@@ -50,7 +51,7 @@ set it in your `.env.local` file as the `AOC_SESSION_KEY` parameter. Beware not 
 Just run:
 
 ```bash
-$ (symfony) console app:resolve-conundrums 2024 1
+$ (symfony) console app:resolve-conundrums <year> <day>
 ```
 
 With the year as your first argument and the day as the second one (both `1` and `01` are valid options).
